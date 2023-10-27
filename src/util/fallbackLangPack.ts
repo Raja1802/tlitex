@@ -11,7 +11,7 @@ export default {
   lng_menu_night_mode: 'Night Mode',
   lng_settings_enable_night_theme: 'Enable night mode',
   'Appearance.Animations': 'ANIMATIONS',
-  TelegramFeatures: 'Telegram Features',
+  TelegramFeatures: 'TLiteX Features',
   AccDescrOpenMenu2: 'Open menu',
   NewMessageTitle: 'New Message',
   NewChannel: 'New Channel',
@@ -110,7 +110,8 @@ export default {
   AccDescrStickerSet: 'Sticker set',
   Recent: 'Recent',
   DeleteChatUser: 'Delete chat',
-  'ChatList.DeleteChatConfirmation': 'Are you sure you want to delete the chat\nwith %@?',
+  'ChatList.DeleteChatConfirmation':
+    'Are you sure you want to delete the chat\nwith %@?',
   'ChatList.DeleteForEveryone': 'Delete for me and %@',
   'ChatList.DeleteForCurrentUser': 'Delete just for me',
   'LastSeen.HoursAgo': {
@@ -141,9 +142,11 @@ export default {
   FirstName: 'First name (required)',
   LastName: 'Last name (optional)',
   UserBio: 'Bio',
-  lng_settings_about_bio: 'Any details such as age, occupation or city.\nExample: 23 y.o. designer from San Francisco',
+  lng_settings_about_bio:
+    'Any details such as age, occupation or city.\nExample: 23 y.o. designer from San Francisco',
   Username: 'Username',
-  UsernameHelp: 'You can choose a username on **Telegram**. If you do, people will be able to find you by this username and contact you without needing your phone number.\n\nYou can use **a–z**, **0–9** and underscores. Minimum length is **5** characters.',
+  UsernameHelp:
+    'You can choose a username on **Telegram**. If you do, people will be able to find you by this username and contact you without needing your phone number.\n\nYou can use **a–z**, **0–9** and underscores. Minimum length is **5** characters.',
   lng_username_link: 'This link opens a chat with you:',
   lng_user_typing: 'typing...',
   lng_send_action_record_video: 'recording video...',
@@ -158,10 +161,12 @@ export default {
     otherValue: '%1$d chats',
   },
   FilterContacts: 'Contacts',
-  CreateNewFilterInfo: 'Create folders for different groups of chats and quickly switch between them.',
+  CreateNewFilterInfo:
+    'Create folders for different groups of chats and quickly switch between them.',
   CreateNewFilter: 'Create New Folder',
   FilterNew: 'New Folder',
-  FilterIncludeInfo: 'Choose chats and types of chats that will appear in this folder.',
+  FilterIncludeInfo:
+    'Choose chats and types of chats that will appear in this folder.',
   FilterNameHint: 'Folder name',
   FilterInclude: 'Included Chats',
   FilterAddChats: 'Add Chats',
@@ -229,11 +234,13 @@ export default {
   PrivacyPhoneTitle: 'Who can see my phone number?',
   LastSeenTitle: 'Who can see your Last Seen time?',
   PrivacyProfilePhotoTitle: 'Who can see my profile photos & videos?',
-  PrivacyForwardsTitle: 'Who can add a link to my account when forwarding my messages?',
+  PrivacyForwardsTitle:
+    'Who can add a link to my account when forwarding my messages?',
   WhoCanAddMe: 'Who can add me to group chats?',
   lng_settings_sensitive_title: 'Sensitive content',
   lng_settings_sensitive_disable_filtering: 'Disable filtering',
-  lng_settings_sensitive_about: 'Display sensitive media in public channels on all your Telegram devices.',
+  lng_settings_sensitive_about:
+    'Display sensitive media in public channels on all your Telegram devices.',
   P2PContacts: 'My Contacts',
   P2PEverybody: 'Everybody',
   P2PNobody: 'Nobody',
@@ -242,8 +249,10 @@ export default {
     otherValue: '%1$d users',
   },
   PasswordOn: 'On',
-  BlockedUsersInfo: 'Blocked users will not be able to contact you and will not see your Last Seen time.',
-  EnabledPasswordText: 'You have enabled Two-Step verification.\nYou\'ll need the password you set up here to log in to your Telegram account.',
+  BlockedUsersInfo:
+    'Blocked users will not be able to contact you and will not see your Last Seen time.',
+  EnabledPasswordText:
+    "You have enabled Two-Step verification.\nYou'll need the password you set up here to log in to your Telegram account.",
   ChangePassword: 'Change Password',
   TurnPasswordOff: 'Turn Password Off',
   SetRecoveryEmail: 'Set Recovery Email',
@@ -275,7 +284,8 @@ export default {
   ChannelLeaveAlertWithName: 'Are you sure you want to leave **%1$s**?',
   'ChatList.Search.ShowLess': 'Show less',
   ChannelDelete: 'Delete Channel',
-  'ChatList.DeleteAndLeaveGroupConfirmation': 'Are you sure you want to leave and delete %@?',
+  'ChatList.DeleteAndLeaveGroupConfirmation':
+    'Are you sure you want to leave and delete %@?',
   'Chat.Input.Delete': 'Delete and Leave',
   formatDateScheduleYear: 'MMM d yyyy',
   October: 'October',
@@ -288,7 +298,8 @@ export default {
   'Month.GenJuly': 'July',
   'Month.ShortJuly': 'Jul',
   'ChatList.Search.NoResults': 'No Results',
-  'ChatList.Search.NoResultsDescription': 'There were no results.\nTry a new search.',
+  'ChatList.Search.NoResultsDescription':
+    'There were no results.\nTry a new search.',
   lng_in_dlg_album: 'Album',
   ReportSelectMessages: 'Select messages',
   'VoiceOver.Chat.MessagesSelected': {
@@ -296,16 +307,19 @@ export default {
     otherValue: '%@ messages selected',
   },
   'Conversation.DeleteManyMessages': 'Delete Messages',
-  AreYouSureDeleteFewMessages: 'Are you sure you want to delete these messages?',
+  AreYouSureDeleteFewMessages:
+    'Are you sure you want to delete these messages?',
   Reply: 'Reply',
   Copy: 'Copy',
   DialogPin: 'Pin',
   Forward: 'Forward',
   'Common.Select': 'Select',
   DeleteSingleMessagesTitle: 'Delete message',
-  AreYouSureDeleteSingleMessage: 'Are you sure you want to delete this message?',
+  AreYouSureDeleteSingleMessage:
+    'Are you sure you want to delete this message?',
   PinMessageAlertTitle: 'Pin message',
-  PinMessageAlertChat: 'Do you want to pin this message at the top of the chat?',
+  PinMessageAlertChat:
+    'Do you want to pin this message at the top of the chat?',
   Close: 'Close',
   ForwardTo: 'Forward to...',
   SavedMessagesInfo: 'Forward here to save.',
@@ -353,22 +367,29 @@ export default {
   DiscussionUnlink: 'Unlink',
   ChannelAdministrators: 'Administrators',
   ChannelSignMessages: 'Sign Messages',
-  ChannelDeleteAlert: 'Wait! Deleting this channel will remove all subscribers and all messages will be lost. Delete the channel anyway?',
+  ChannelDeleteAlert:
+    'Wait! Deleting this channel will remove all subscribers and all messages will be lost. Delete the channel anyway?',
   ChannelTypeHeader: 'Channel type',
   ChannelPrivate: 'Private Channel',
   ChannelPrivateInfo: 'Private channels can only be joined via an invite link.',
   ChannelPublic: 'Public Channel',
-  ChannelPublicInfo: 'Public channels can be found in search, anyone can join them.',
-  'Channel.Username.CreatePublicLinkHelp': 'People can share this link with others and find your channel using Telegram search.',
+  ChannelPublicInfo:
+    'Public channels can be found in search, anyone can join them.',
+  'Channel.Username.CreatePublicLinkHelp':
+    'People can share this link with others and find your channel using Telegram search.',
   SetUrlPlaceholder: 'Link',
-  ChannelPrivateLinkHelp: 'People can join your channel by following this link. You can revoke the link any time.',
+  ChannelPrivateLinkHelp:
+    'People can join your channel by following this link. You can revoke the link any time.',
   RevokeLink: 'Revoke Link',
-  RevokeAlert: 'Are you sure you want to revoke this link? Once the link is revoked, no one will be able to join using it.',
+  RevokeAlert:
+    'Are you sure you want to revoke this link? Once the link is revoked, no one will be able to join using it.',
   RevokeButton: 'Revoke',
   DiscussionUnlinkGroup: 'Unlink Group',
-  DiscussionUnlinkChannelAlert: 'Are you sure you want to unlink **%1$s** from this channel?',
+  DiscussionUnlinkChannelAlert:
+    'Are you sure you want to unlink **%1$s** from this channel?',
   EventLog: 'Recent Actions',
-  EventLogInfoDetailChannel: 'This is a list of all service actions taken by the channel\'s admins in the last 48 hours.',
+  EventLogInfoDetailChannel:
+    "This is a list of all service actions taken by the channel's admins in the last 48 hours.",
   ChannelCreator: 'Owner',
   EditAdminRights: 'Edit admin rights',
   EditAdminWhatCanDo: 'What can this admin do?',
@@ -402,17 +423,23 @@ export default {
   ChannelPermissions: 'Permissions',
   ChatHistory: 'Chat history for new members',
   DeleteMega: 'Delete Group',
-  AreYouSureDeleteThisChatWithGroup: 'Are you sure you want to delete the chat **%1$s**?',
+  AreYouSureDeleteThisChatWithGroup:
+    'Are you sure you want to delete the chat **%1$s**?',
   DeleteGroupForAll: 'Delete the group for all members',
   GroupTypeHeader: 'Group type',
   MegaPrivate: 'Private Group',
-  MegaPrivateInfo: 'Private groups can only be joined if you were invited or have an invite link.',
+  MegaPrivateInfo:
+    'Private groups can only be joined if you were invited or have an invite link.',
   MegaPublic: 'Public Group',
-  MegaPublicInfo: 'Public groups can be found in search, chat history is available to everyone and anyone can join.',
-  'Group.Username.CreatePublicLinkHelp': 'People can share this link with others and find your group using Telegram search.',
-  MegaPrivateLinkHelp: 'People can join your group by following this link. You can revoke the link any time.',
+  MegaPublicInfo:
+    'Public groups can be found in search, chat history is available to everyone and anyone can join.',
+  'Group.Username.CreatePublicLinkHelp':
+    'People can share this link with others and find your group using Telegram search.',
+  MegaPrivateLinkHelp:
+    'People can join your group by following this link. You can revoke the link any time.',
   DiscussionUnlinkChannel: 'Unlink Channel',
-  DiscussionUnlinkGroupAlert: 'Are you sure you want to unlink **%1$s** from this group?',
+  DiscussionUnlinkGroupAlert:
+    'Are you sure you want to unlink **%1$s** from this group?',
   ChannelPermissionsHeader: 'What can members of this group do?',
   UserRestrictionsSend: 'Send Messages',
   UserRestrictionsSendMedia: 'Send Media',
@@ -424,8 +451,10 @@ export default {
   UserRestrictionsChangeInfo: 'Change Chat Info',
   ChannelBlockedUsers: 'Removed users',
   ChannelAddException: 'Add Exception',
-  NoBlockedGroup2: 'Users removed from the group by the admins can\'t rejoin via invite links.',
-  EventLogInfoDetail: 'This is a list of notable actions by members and admins in the last 48 hours.',
+  NoBlockedGroup2:
+    "Users removed from the group by the admins can't rejoin via invite links.",
+  EventLogInfoDetail:
+    'This is a list of notable actions by members and admins in the last 48 hours.',
   EditAdminChangeGroupInfo: 'Change Group Info',
   EditAdminBanUsers: 'Ban Users',
   EditAdminPinMessages: 'Pin Messages',
@@ -481,7 +510,8 @@ export default {
     oneValue: '%1$d comment',
     otherValue: '%1$d comments',
   },
-  'Conversation.DefaultRestrictedMedia': 'Posting media content isn\'t allowed in this group.',
+  'Conversation.DefaultRestrictedMedia':
+    "Posting media content isn't allowed in this group.",
   DiscussionStarted: 'Discussion started',
   DiscussChannel: 'channel',
   'SharedMedia.EmptyTitle': 'No media files yet',
@@ -494,14 +524,18 @@ export default {
   AutoDownloadFilesTitle: 'Auto-download files and music',
   'ChannelVisibility.Forwarding.ChannelTitle': 'Forwarding From This Channel',
   'ChannelVisibility.Forwarding.GroupTitle': 'Forwarding From This Group',
-  'ChannelVisibility.Forwarding.ChannelInfo': 'Subscribers can forward messages from this channel and save media files.',
-  'ChannelVisibility.Forwarding.GroupInfo': 'Members can forward messages from this group and save media files.',
+  'ChannelVisibility.Forwarding.ChannelInfo':
+    'Subscribers can forward messages from this channel and save media files.',
+  'ChannelVisibility.Forwarding.GroupInfo':
+    'Members can forward messages from this group and save media files.',
   'ChannelVisibility.Forwarding.Enabled': 'Allow Forwarding',
   'ChannelVisibility.Forwarding.Disabled': 'Restrict Forwarding',
   'Settings.TipsUsername': 'TelegramTips',
   FoldersAllChatsDesc: 'All unarchived chats',
-  'Video.Unsupported.Desktop': 'Unfortunately, this video can\'t be played on Telegram Web. Try opening it with our **desktop app** instead.',
-  'Video.Unsupported.Mobile': 'Unfortunately, this video can\'t be played on Telegram Web. Try opening it with our **mobile app** instead.',
+  'Video.Unsupported.Desktop':
+    "Unfortunately, this video can't be played on Telegram Web. Try opening it with our **desktop app** instead.",
+  'Video.Unsupported.Mobile':
+    "Unfortunately, this video can't be played on Telegram Web. Try opening it with our **mobile app** instead.",
   SlowModeWait: 'Slow Mode — %d',
   OpenMapWith: 'Open map with...',
 } as ApiLangPack;

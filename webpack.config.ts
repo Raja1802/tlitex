@@ -27,7 +27,7 @@ const {
 
 dotenv.config();
 
-const DEFAULT_APP_TITLE = `Telegram${APP_ENV !== 'production' ? ' Beta' : ''}`;
+const DEFAULT_APP_TITLE = `TLiteX${APP_ENV !== 'production' ? ' Beta' : ''}`;
 
 // GitHub workflow uses an empty string as the default value if it's not in repository variables, so we cannot define a default value here
 process.env.BASE_URL = process.env.BASE_URL || PRODUCTION_URL;
@@ -40,17 +40,22 @@ const {
 
 const CSP = `
   default-src 'self';
-  connect-src 'self' wss://*.web.telegram.org blob: http: https: ${APP_ENV === 'development' ? 'wss:' : ''};
+  connect-src 'self' wss://*.web.telegram.org blob: http: https: ${
+  APP_ENV === 'development' ? 'wss:' : ''
+};
   script-src 'self' 'wasm-unsafe-eval' https://t.me/_websync_ https://telegram.me/_websync_;
   style-src 'self' 'unsafe-inline';
   img-src 'self' data: blob: https://ss3.4sqi.net/img/categories_v2/
   ${IS_ELECTRON_BUILD ? `${BASE_URL}/` : ''};
-  media-src 'self' blob: data: ${IS_ELECTRON_BUILD ? [`${BASE_URL}/`, ELECTRON_HOST_URL].join(' ') : ''};
+  media-src 'self' blob: data: ${
+  IS_ELECTRON_BUILD ? [`${BASE_URL}/`, ELECTRON_HOST_URL].join(' ') : ''
+};
   object-src 'none';
   frame-src http: https:;
   base-uri 'none';
   form-action 'none';`
-  .replace(/\s+/g, ' ').trim();
+  .replace(/\s+/g, ' ')
+  .trim();
 
 export default function createConfig(
   _: any,
@@ -135,7 +140,8 @@ export default function createConfig(
                 modules: {
                   exportLocalsConvention: 'camelCase',
                   auto: true,
-                  localIdentName: mode === 'production' ? '[hash:base64]' : '[name]__[local]',
+                  localIdentName:
+                    mode === 'production' ? '[hash:base64]' : '[name]__[local]',
                 },
               },
             },
@@ -175,15 +181,26 @@ export default function createConfig(
         /highlight\.js[\\/]lib[\\/]languages/,
         /^((?!\.js\.js).)*$/,
       ),
-      ...(APP_MOCKED_CLIENT === '1' ? [new NormalModuleReplacementPlugin(
-        /src[\\/]lib[\\/]gramjs[\\/]client[\\/]TelegramClient\.js/,
-        './MockClient.ts',
-      )] : []),
+      ...(APP_MOCKED_CLIENT === '1'
+        ? [
+          new NormalModuleReplacementPlugin(
+            /src[\\/]lib[\\/]gramjs[\\/]client[\\/]TelegramClient\.js/,
+            './MockClient.ts',
+          ),
+        ]
+        : []),
       new HtmlWebpackPlugin({
         appTitle: APP_TITLE,
-        appleIcon: APP_ENV === 'production' ? 'apple-touch-icon' : 'apple-touch-icon-dev',
-        mainIcon: APP_ENV === 'production' ? 'icon-192x192' : 'icon-dev-192x192',
-        manifest: APP_ENV === 'production' ? 'site.webmanifest' : 'site_dev.webmanifest',
+        appleIcon:
+          APP_ENV === 'production'
+            ? 'apple-touch-icon'
+            : 'apple-touch-icon-dev',
+        mainIcon:
+          APP_ENV === 'production' ? 'icon-192x192' : 'icon-dev-192x192',
+        manifest:
+          APP_ENV === 'production'
+            ? 'site.webmanifest'
+            : 'site_dev.webmanifest',
         baseUrl: BASE_URL,
         csp: CSP,
         template: 'src/index.html',
@@ -211,11 +228,14 @@ export default function createConfig(
       // Updates each dev re-build to provide current git branch or commit hash
       new DefinePlugin({
         APP_VERSION: JSON.stringify(appVersion),
-        APP_REVISION: DefinePlugin.runtimeValue(() => {
-          const { branch, commit } = getGitMetadata();
-          const shouldDisplayCommit = APP_ENV === 'staging' || !branch || branch === 'HEAD';
-          return JSON.stringify(shouldDisplayCommit ? commit : branch);
-        }, mode === 'development' ? true : []),
+        APP_REVISION: DefinePlugin.runtimeValue(
+          () => {
+            const { branch, commit } = getGitMetadata();
+            const shouldDisplayCommit = APP_ENV === 'staging' || !branch || branch === 'HEAD';
+            return JSON.stringify(shouldDisplayCommit ? commit : branch);
+          },
+          mode === 'development' ? true : [],
+        ),
       }),
       new ProvidePlugin({
         Buffer: ['buffer', 'Buffer'],
@@ -232,7 +252,8 @@ export default function createConfig(
       }),
     ],
 
-    devtool: APP_ENV === 'production' && IS_ELECTRON_BUILD ? undefined : 'source-map',
+    devtool:
+      APP_ENV === 'production' && IS_ELECTRON_BUILD ? undefined : 'source-map',
 
     optimization: {
       splitChunks: {
@@ -270,7 +291,10 @@ class WebpackContextExtension {
 
   getExtension() {
     return {
-      descriptor: { name: 'custom-webpack-extension-context', version: '1.0.0' },
+      descriptor: {
+        name: 'custom-webpack-extension-context',
+        version: '1.0.0',
+      },
       payload: { context: this.context },
     };
   }

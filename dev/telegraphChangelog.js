@@ -21,7 +21,9 @@ const pageTemplate = `
     <p><i>This list is automatically updated when a new commit pushed to the beta repo</i></p>\
     <ul id="list"></ul>\
     <aside><a href="https://t.me/webatalks">Web A Discussion</a> <b>|</b> <a href="https://t.me/webatalksru">Web A Обсуждение</a> <b>|</b> <a href="https://t.me/webatalksuk">Web A Обговорення</a></aside>\
-    <aside><i>Last update: ${new Date().toLocaleDateString('en-CA')}</i></aside>\
+    <aside><i>Last update: ${new Date().toLocaleDateString(
+    'en-CA',
+  )}</i></aside>\
 </body>
 `.trim();
 
@@ -40,10 +42,16 @@ updateChangelog();
 async function updateTelegraph(dom) {
   const api = new Telegraph();
   const content = domToNode(dom.window.document.body).children;
-  const result = await api.editPage(AUTH_TOKEN, 'WebA-Beta-03-20', 'Telegram Web A Beta Changelog', content, {
-    author_name: 'Web A team',
-    author_url: 'https://t.me/webachannel',
-  });
+  const result = await api.editPage(
+    AUTH_TOKEN,
+    'WebA-Beta-03-20',
+    'TliteX Web A Beta Changelog',
+    content,
+    {
+      author_name: 'Web A team',
+      author_url: 'https://t.me/webachannel',
+    },
+  );
   // eslint-disable-next-line no-console
   console.log(result);
 }
@@ -53,9 +61,9 @@ async function preparePage() {
 
   const commits = await getCommitsSince(version);
 
-  commits.forEach((commit) => (
-    dom.window.document.getElementById('list').appendChild(renderCommit(dom, commit))
-  ));
+  commits.forEach((commit) => dom.window.document
+    .getElementById('list')
+    .appendChild(renderCommit(dom, commit)));
 
   if (!commits?.length) {
     const li = dom.window.document.createElement('li');
@@ -69,7 +77,10 @@ async function preparePage() {
 function renderCommit(dom, commit) {
   const li = dom.window.document.createElement('li');
   const subject = commit.subject.replaceAll(/`(.+?)`/g, '<code>$1</code>');
-  li.innerHTML = `<p><code>${commit.hash.substring(0, 7)}</code> <b>${subject}</b></p>`;
+  li.innerHTML = `<p><code>${commit.hash.substring(
+    0,
+    7,
+  )}</code> <b>${subject}</b></p>`;
   return li;
 }
 
